@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P520231_VolmarC", "P520231_VolmarC\P520231_VolmarC.csproj", "{7CF2932E-8685-4635-A1FE-A759A1116AFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2082F235-9B46-422E-807F-D0FFFD1725FA} = {2082F235-9B46-422E-807F-D0FFFD1725FA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{2082F235-9B46-422E-807F-D0FFFD1725FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CF2932E-8685-4635-A1FE-A759A1116AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF2932E-8685-4635-A1FE-A759A1116AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF2932E-8685-4635-A1FE-A759A1116AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF2932E-8685-4635-A1FE-A759A1116AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2082F235-9B46-422E-807F-D0FFFD1725FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2082F235-9B46-422E-807F-D0FFFD1725FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2082F235-9B46-422E-807F-D0FFFD1725FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2082F235-9B46-422E-807F-D0FFFD1725FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0ECD57D-A4CB-4C57-BAA6-EFA76456420F}
+	EndGlobalSection
+EndGlobal
