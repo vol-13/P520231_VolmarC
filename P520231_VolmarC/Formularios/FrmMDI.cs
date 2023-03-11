@@ -21,5 +21,17 @@ namespace P520231_VolmarC.Formularios
         {
             Application.Exit();
         }
+
+        private void gestiónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            //control para que el formulario de gestion se muestre una vez
+            if (!Globales.MiFormGestionUsario.Visible)
+            {
+                Globales.MiFormGestionUsario = new FrmUsuariosGestion();
+
+                Globales.MiFormGestionUsario.Show();
+            }
+        }
     }
 }

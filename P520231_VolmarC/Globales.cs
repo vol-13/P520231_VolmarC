@@ -7,5 +7,7 @@ namespace P520231_VolmarC
         //Estas propiedades al pertenecer a una clase static se auto instancian
         //Y se puede obtener acceso a ellas en la globalidad de la aplicación.
         public static Form MiFormPrincipal = new Formularios.FrmMDI();
+
+        public static Formularios.FrmUsuariosGestion MiFormGestionUsario = new Formularios.FrmUsuariosGestion();
     }
 }

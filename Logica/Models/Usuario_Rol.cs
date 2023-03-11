@@ -23,11 +23,19 @@ namespace Logica.Models
 		public DataTable Listar(){
 			
 			DataTable R = new DataTable();
-			//aqui va la programacion del diagrama de
-			//secuencia
+			
+			Services.Conexion MiCnn = new Services.Conexion();
+
+			R = MiCnn.EjecutarSELECT("SPUsuarioRolListar");
 
 			return R;
 		}
+
+
+
+
+
+
 
 	}
 }

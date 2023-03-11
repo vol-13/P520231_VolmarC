@@ -73,6 +73,9 @@
     <EmbeddedResource Include="Formularios\FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmUsuariosGestion.resx">
+      <DependentUpon>FrmUsuariosGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
