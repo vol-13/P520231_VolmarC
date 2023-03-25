@@ -42,7 +42,31 @@ namespace Logica.Models
         public bool Agregar()
         {
             bool R = false;
-            //código de procedimiento almacenado, DML INSERT
+            
+            //paso 1.6.1 y 1.6.2
+            Conexion MiCnn = new Conexion();
+
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Correo",this.UsuarioCorreo));
+            //EncriptarContraseña
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Contrasennia", this.UsuarioContrasennia));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Nombre", this.UsuarioNombre));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Cedula", this.UsuarioCedula));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Telefono", this.UsuarioTelefono));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Direccion", this.UsuarioDireccion));
+
+            //normalmente los foreing key tiene composiciones
+            //se debe extraer el valor del objeto compuesto MiRolTipo
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@IdRol", this.MiRolTipo.UsuarioRolId));
+
+            //pasos 1.6.3 y 1.6.4
+            int resultado = MiCnn.EjecutarInsertUpdateDelete("SPUsuarioAgregar");
+
+            //Paso 1.6.5
+            if(resultado > 0) 
+            {
+                R = true;
+            }
+
             return R;
         }
 
@@ -96,7 +120,7 @@ namespace Logica.Models
 
                 //composiciones
                 R.MiRolTipo.UsuarioRolId = Convert.ToInt32(dr["UsuarioRolID"]);
-                R.MiRolTipo.UsuarioRolDescripcion = Convert.ToString(dr["UsuarioRolDescripcion]);
+                R.MiRolTipo.UsuarioRolDescripcion = Convert.ToString(dr["UsuarioRolDescripcion"]);
 
             }
 
@@ -107,12 +131,44 @@ namespace Logica.Models
         {
             bool R = false;
 
+            //paso 1.3.1 y 1.3.2
+            Conexion MiCnn = new Conexion();
+
+            //parametros
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@cedula", this.UsuarioCedula));
+
+           DataTable consulta = new DataTable();
+            //Paso 1.3.3 y 1.3.4
+            consulta = MiCnn.EjecutarSELECT("SPUsuarioConsultarPorCedula");
+
+            //Paso 1.3.5
+            if (consulta != null && consulta.Rows.Count > 0)
+            {
+                R = true;
+            }
+
             return R;
         }
 
         public bool ConsultarPorEmail()
         {
             bool R = false;
+
+            //Paso 1.4.1 y 1.4.2
+            Conexion MiCnn = new Conexion();
+
+            //parametros
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@correo", this.UsuarioCorreo));
+
+            DataTable consulta = new DataTable();
+            //Paso 1.4.3 y 1.4.4
+            consulta = MiCnn.EjecutarSELECT("SPUsuarioConsultarPorEmail");
+
+            //Paso 1.4.5
+            if (consulta != null && consulta.Rows.Count > 0)
+            {
+                R = true;
+            }
 
             return R;
         }
