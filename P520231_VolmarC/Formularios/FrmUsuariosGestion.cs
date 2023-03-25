@@ -38,14 +38,14 @@ namespace P520231_VolmarC.Formularios
             CargarListaDeUsuarios();
         }
 
-        private void CargarListaDeUsuarios() 
+        private void CargarListaDeUsuarios()
         {
             //resetear la lista de usuarios haciendo reintstancia del objeto
             ListaUsuarios = new DataTable();
 
-            if(CboxVerActivos.Checked)
+            if (CboxVerActivos.Checked)
             {
-                 ListaUsuarios = MiUsuarioLocal.ListarActivos();
+                ListaUsuarios = MiUsuarioLocal.ListarActivos();
             }
             else
             {
@@ -54,10 +54,10 @@ namespace P520231_VolmarC.Formularios
 
             DgLista.DataSource = ListaUsuarios;
 
-           
+
         }
 
-        
+
         private void CargarListaRoles()
         {
             Logica.Models.Usuario_Rol MiRol = new Logica.Models.Usuario_Rol();
@@ -66,10 +66,10 @@ namespace P520231_VolmarC.Formularios
 
             dt = MiRol.Listar();
 
-            if (dt != null && dt.Rows.Count > 0 )
+            if (dt != null && dt.Rows.Count > 0)
             {
                 CbRolesUsuario.ValueMember = "ID";
-                CbRolesUsuario.DisplayMember= "Descrip";
+                CbRolesUsuario.DisplayMember = "Descrip";
                 CbRolesUsuario.DataSource = dt;
                 CbRolesUsuario.SelectedIndex = -1;
             }
@@ -85,7 +85,7 @@ namespace P520231_VolmarC.Formularios
             //cuando seleccionemos una fila del datagrid se debe cargar la info de dicho usuario
             //en el usuario local y luego dibujar esa info en los controles graficos
 
-            if(DgLista.SelectedRows.Count == 1)
+            if (DgLista.SelectedRows.Count == 1)
             {
                 //TO DO: limpiar el forms
 
@@ -107,10 +107,10 @@ namespace P520231_VolmarC.Formularios
 
                 //validamos que el usuario local tenga datos
 
-                if(MiUsuarioLocal != null && MiUsuarioLocal.UsuarioId > 0) 
+                if (MiUsuarioLocal != null && MiUsuarioLocal.UsuarioId > 0)
                 {
                     //si carga correctamente, se llenan los controles
-                    TxtUsuarioID.Text = Convert.ToString (MiUsuarioLocal.UsuarioId);
+                    TxtUsuarioID.Text = Convert.ToString(MiUsuarioLocal.UsuarioId);
 
                     TxtUsuarioNombre.Text = MiUsuarioLocal.UsuarioNombre;
 
@@ -129,7 +129,7 @@ namespace P520231_VolmarC.Formularios
 
 
                 }
-             
+
 
 
             }
@@ -149,7 +149,7 @@ namespace P520231_VolmarC.Formularios
             TxtUsuarioCorreo.Clear();
             txtUsuarioContrasennia.Clear();
 
-            CbRolesUsuario.SelectedIndex= -1;
+            CbRolesUsuario.SelectedIndex = -1;
 
             TxtUsuarioDireccion.Clear();
 
@@ -160,9 +160,9 @@ namespace P520231_VolmarC.Formularios
             //Evalua que se haya digitado los campos de texto en el formulario
             bool R = false;
 
-            if (!string.IsNullOrEmpty(TxtUsuarioNombre.Text.Trim())&& !string.IsNullOrEmpty(TxtCedula.Text.Trim()) &&
-                !string.IsNullOrEmpty(TxtUsuarioTelefono.Text.Trim())&& !string.IsNullOrEmpty(TxtUsuarioCorreo.Text.Trim())&&
-                !string.IsNullOrEmpty(txtUsuarioContrasennia.Text.Trim()) && CbRolesUsuario.SelectedIndex > -1 )
+            if (!string.IsNullOrEmpty(TxtUsuarioNombre.Text.Trim()) && !string.IsNullOrEmpty(TxtCedula.Text.Trim()) &&
+                !string.IsNullOrEmpty(TxtUsuarioTelefono.Text.Trim()) && !string.IsNullOrEmpty(TxtUsuarioCorreo.Text.Trim()) &&
+                !string.IsNullOrEmpty(txtUsuarioContrasennia.Text.Trim()) && CbRolesUsuario.SelectedIndex > -1)
             {
                 R = true;
             }
@@ -215,6 +215,7 @@ namespace P520231_VolmarC.Formularios
 
             }
 
+            return R;
 
         }
 
