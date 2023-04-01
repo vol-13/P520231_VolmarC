@@ -229,6 +229,7 @@
             this.TxtUsuarioCorreo.Name = "TxtUsuarioCorreo";
             this.TxtUsuarioCorreo.Size = new System.Drawing.Size(233, 26);
             this.TxtUsuarioCorreo.TabIndex = 12;
+            this.TxtUsuarioCorreo.TextChanged += new System.EventHandler(this.TxtUsuarioCorreo_TextChanged);
             // 
             // TxtUsuarioTelefono
             // 
@@ -356,6 +357,7 @@
             this.BtnModificar.TabIndex = 5;
             this.BtnModificar.Text = "MODIFICAR";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
             // 
@@ -368,6 +370,7 @@
             this.BtnEliminar.TabIndex = 5;
             this.BtnEliminar.Text = "ELIMINAR";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnLimpiar
             // 

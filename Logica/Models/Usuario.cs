@@ -74,6 +74,31 @@ namespace Logica.Models
         {
             bool R = false;
 
+            Conexion MiCnn = new Conexion();
+
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Correo", this.UsuarioCorreo));
+            //EncriptarContraseña
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Contrasennia", this.UsuarioContrasennia));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Nombre", this.UsuarioNombre));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Cedula", this.UsuarioCedula));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Telefono", this.UsuarioTelefono));
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@Direccion", this.UsuarioDireccion));
+
+            //normalmente los foreing key tiene composiciones
+            //se debe extraer el valor del objeto compuesto MiRolTipo
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@IdRol", this.MiRolTipo.UsuarioRolId));
+        
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@ID", this.UsuarioId));
+
+            //pasos 1.6.3 y 1.6.4
+            int resultado = MiCnn.EjecutarInsertUpdateDelete("SPUsuarioModificar");
+
+            //Paso 1.6.5
+            if (resultado > 0)
+            {
+                R = true;
+            }
+
             return R;
         }
 
@@ -81,12 +106,40 @@ namespace Logica.Models
         {
             bool R = false;
 
+            Conexion MiCnn = new Conexion();
+
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@ID", this.UsuarioId));
+
+            int respuesta = MiCnn.EjecutarInsertUpdateDelete("SPUsuarioDesactivar");
+
+            if(respuesta > 0)
+            {
+                R = true;
+            }
+
             return R;
         }
+
+        
 
         public bool ConsultarPorID()
         {
             bool R = false;
+
+            Conexion MiCnn = new Conexion();
+
+            MiCnn.ListaDeParametros.Add(new SqlParameter("@ID", this.UsuarioId));
+
+            //datatable para capturar info del usuario
+            DataTable dt = new DataTable();
+
+            dt = MiCnn.EjecutarSELECT("SPUsuarioConsultarPorID");
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                R = true;
+
+            }
 
             return R;
         }
@@ -113,6 +166,7 @@ namespace Logica.Models
                 R.UsuarioId = Convert.ToInt32(dr["UsuarioID"]);
                 R.UsuarioNombre = Convert.ToString(dr["UsuarioNombre"]);
                 R.UsuarioCedula = Convert.ToString(dr["UsuarioCedula"]);
+                R.UsuarioCorreo = Convert.ToString(dr["UsuarioCorreo"]);
                 R.UsuarioTelefono = Convert.ToString(dr["UsuarioTelefono"]);
                 R.UsuarioDireccion = Convert.ToString(dr["UsuarioDireccion"]);
 
