@@ -42,16 +42,27 @@ namespace P520231_VolmarC.Formularios
 
         private void CargarListaDeUsuarios()
         {
+
             //resetear la lista de usuarios haciendo reintstancia del objeto
             ListaUsuarios = new DataTable();
 
-            if (CboxVerActivos.Checked)
+            //si en el cuadro de texto de búsqueda hay más de 3 caracteres se filtra la lista
+            string filtroBusqueda = "";
+            if (!string.IsNullOrEmpty(txtBuscar.Text.Trim()) && txtBuscar.Text.Count() >= 3)
             {
-                ListaUsuarios = MiUsuarioLocal.ListarActivos();
+
+                filtroBusqueda = txtBuscar.Text.Trim();
+
+            }
+
+
+            if (CboxVerActivos.Checked)
+            { 
+                ListaUsuarios = MiUsuarioLocal.ListarActivos(filtroBusqueda);
             }
             else
             {
-                ListaUsuarios = MiUsuarioLocal.ListarInactivos();
+                ListaUsuarios = MiUsuarioLocal.ListarInactivos(filtroBusqueda);
             }
 
             DgLista.DataSource = ListaUsuarios;
@@ -434,7 +445,7 @@ namespace P520231_VolmarC.Formularios
                 }
                 else
                 {
-                    //Activar usuario
+                    //Activar usuario tarea
 
                 }
 
@@ -442,6 +453,78 @@ namespace P520231_VolmarC.Formularios
 
             }
 
+
+        }
+
+        private void TxtUsuarioNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresTexto(e, true);
+        }
+
+        private void TxtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresNumeros(e, true);
+        }
+
+        private void TxtUsuarioTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresTexto(e);
+        }
+
+        private void TxtUsuarioCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresTexto(e, false, true);
+        }
+
+        private void txtUsuarioContrasennia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresTexto(e);
+        }
+
+        private void TxtUsuarioDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresTexto(e, true);
+        }
+
+        private void TxtUsuarioCorreo_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TxtUsuarioCorreo.Text.Trim()))
+            {
+                if (!Validaciones.ValidarEmail(TxtUsuarioCorreo.Text.Trim()))
+                {
+                    MessageBox.Show("El formato del correo electrónico es incorrecto", "Error de la validación", MessageBoxButtons.OK);
+                    TxtUsuarioCorreo.Focus();
+                }
+            }
+        }
+
+        private void TxtUsuarioCorreo_Enter(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TxtUsuarioCorreo.Text.Trim()))
+            {
+                TxtUsuarioCorreo.SelectAll();
+            }
+        }
+
+        private void CboxVerActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarListaDeUsuarios();
+
+            if (CboxVerActivos.Checked)
+            {
+                BtnEliminar.Text = "ELIMINAR";
+            }
+            else
+            {
+                BtnEliminar.Text = "ACTIVAR";
+            } 
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+            CargarListaDeUsuarios();
 
         }
     }
