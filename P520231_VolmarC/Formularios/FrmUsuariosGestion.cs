@@ -446,6 +446,18 @@ namespace P520231_VolmarC.Formularios
                 else
                 {
                     //Activar usuario tarea
+                    DialogResult r = MessageBox.Show("¿Está seguro que desea activar el usuario?", "???", MessageBoxButtons.YesNo
+                     , MessageBoxIcon.Question);
+                    if (r == DialogResult.Yes)
+                    {
+                        if (MiUsuarioLocal.Activar())
+                        {
+                            MessageBox.Show("El usuario ha sido activado satisfactoriamente", ":D", MessageBoxButtons.OK);
+                            LimpiarFormulario();
+                            CargarListaDeUsuarios();
+                        }
+
+                    }
 
                 }
 
