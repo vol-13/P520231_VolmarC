@@ -33,5 +33,47 @@ namespace P520231_VolmarC.Formularios
                 Globales.MiFormGestionUsario.Show();
             }
         }
+
+        private void FrmMDI_Load(object sender, EventArgs e)
+        {
+            //mostar el usuario logueado
+            string InfoUsuario = string.Format("{0} - {1}({2})", 
+            Globales.MiUsuarioGlobal.UsuarioNombre,
+            Globales.MiUsuarioGlobal.UsuarioCorreo, 
+            Globales.MiUsuarioGlobal.MiRolTipo.UsuarioRolDescripcion);
+
+            LblUsuario.Text = InfoUsuario;
+
+            //Ocultar opciones de menu al usuario normal
+            switch (Globales.MiUsuarioGlobal.MiRolTipo.UsuarioRolId)
+            {
+                case 1:
+                    //seria admin, no se le oculta nada
+                    break;
+
+                case 2:
+                    //ocultar opciones de menu al usuario normal
+                    gestiónDeProductosToolStripMenuItem.Visible = false;
+                    rolesDeUsuarioToolStripMenuItem.Visible = false;
+                    tiposDeProveedorToolStripMenuItem.Visible = false;
+                    tiposDeCompraToolStripMenuItem.Visible = false;
+                    break;
+
+            }
+
+
+
+
+
+        }
+
+        private void registroDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.MiFormRegistroCompra.Visible)
+            {
+                Globales.MiFormRegistroCompra = new FrmRegistroCompra();
+                Globales.MiFormRegistroCompra.Show();
+            }
+        }
     }
 }
