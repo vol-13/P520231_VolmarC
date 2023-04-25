@@ -75,5 +75,15 @@ namespace P520231_VolmarC.Formularios
                 Globales.MiFormRegistroCompra.Show();
             }
         }
+
+        private void gestiónDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.MiFormGestionProveedor.Visible)
+            {
+                Globales.MiFormGestionProveedor = new FrmProveedorGestion();
+
+                Globales.MiFormGestionProveedor.Show();
+            }
+        }
     }
 }

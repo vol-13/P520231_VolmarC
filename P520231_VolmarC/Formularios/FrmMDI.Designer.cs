@@ -112,6 +112,7 @@
             this.gestiónDeProveedoresToolStripMenuItem.Name = "gestiónDeProveedoresToolStripMenuItem";
             this.gestiónDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
             this.gestiónDeProveedoresToolStripMenuItem.Text = "Gestión de Proveedores";
+            this.gestiónDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeProveedoresToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 

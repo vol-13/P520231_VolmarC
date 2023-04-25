@@ -224,7 +224,7 @@ namespace P520231_VolmarC.Formularios
                 //Que pasa cuando algo falta?
                 if (string.IsNullOrEmpty(TxtUsuarioNombre.Text.Trim()))
                 {
-                    MessageBox.Show("Debe digitar un nombre para el usuario", "Eror de validación", MessageBoxButtons.OK);
+                    MessageBox.Show("Debe digitar un nombre para el usuario", "Error de validación", MessageBoxButtons.OK);
                     TxtUsuarioNombre.Focus();
                     return false;
                 }
@@ -261,9 +261,6 @@ namespace P520231_VolmarC.Formularios
                 }
 
 
-
-
-
             }
 
             return R;
@@ -275,8 +272,6 @@ namespace P520231_VolmarC.Formularios
             if (ValidarDatosDigitados())
             {
 
-
-
                 //estas variables almacenan el resultado de las consultas por correo y cedula
 
                 bool CedulaOk;
@@ -284,8 +279,6 @@ namespace P520231_VolmarC.Formularios
 
                 //Paso 1.1 y 1.2
                 MiUsuarioLocal = new Logica.Models.Usuario();
-
-
 
                 MiUsuarioLocal.UsuarioNombre = TxtUsuarioNombre.Text.Trim();
                 MiUsuarioLocal.UsuarioCedula = TxtCedula.Text.Trim();
@@ -412,10 +405,7 @@ namespace P520231_VolmarC.Formularios
 
         }
 
-        private void TxtUsuarioCorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
@@ -539,5 +529,6 @@ namespace P520231_VolmarC.Formularios
             CargarListaDeUsuarios();
 
         }
+
     }
 }

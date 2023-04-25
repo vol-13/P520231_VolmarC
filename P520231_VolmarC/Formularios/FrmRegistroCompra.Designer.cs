@@ -30,34 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroCompra));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtProveedorNombre = new System.Windows.Forms.TextBox();
-            this.BtnProveedorBuscar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CboxCompraTipo = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.TxtNotas = new System.Windows.Forms.TextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnProductoAgregar = new System.Windows.Forms.ToolStripButton();
-            this.BtnProductoEditar = new System.Windows.Forms.ToolStripButton();
-            this.BtnProductoEliminar = new System.Windows.Forms.ToolStripButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CboxCompraTipo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnProveedorBuscar = new System.Windows.Forms.Button();
+            this.TxtProveedorNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DgvLista = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtTotalCantidad = new System.Windows.Forms.TextBox();
-            this.textTotal = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.BtnCrearCompra = new System.Windows.Forms.Button();
             this.CProductoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CProductoCodigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CProductoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPrecioVentaUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtTotalCantidad = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.BtnCrearCompra = new System.Windows.Forms.Button();
+            this.BtnProductoAgregar = new System.Windows.Forms.ToolStripButton();
+            this.BtnProductoEditar = new System.Windows.Forms.ToolStripButton();
+            this.BtnProductoEliminar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,50 +77,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Encabezado (Tabla Compra)";
             // 
-            // groupBox2
+            // TxtNotas
             // 
-            this.groupBox2.Controls.Add(this.DgvLista);
-            this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 161);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(585, 254);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detalle";
+            this.TxtNotas.Location = new System.Drawing.Point(84, 86);
+            this.TxtNotas.Multiline = true;
+            this.TxtNotas.Name = "TxtNotas";
+            this.TxtNotas.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TxtNotas.Size = new System.Drawing.Size(371, 51);
+            this.TxtNotas.TabIndex = 6;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Proveedor";
-            // 
-            // TxtProveedorNombre
-            // 
-            this.TxtProveedorNombre.Location = new System.Drawing.Point(84, 19);
-            this.TxtProveedorNombre.Name = "TxtProveedorNombre";
-            this.TxtProveedorNombre.Size = new System.Drawing.Size(371, 20);
-            this.TxtProveedorNombre.TabIndex = 1;
-            // 
-            // BtnProveedorBuscar
-            // 
-            this.BtnProveedorBuscar.Location = new System.Drawing.Point(461, 19);
-            this.BtnProveedorBuscar.Name = "BtnProveedorBuscar";
-            this.BtnProveedorBuscar.Size = new System.Drawing.Size(80, 20);
-            this.BtnProveedorBuscar.TabIndex = 2;
-            this.BtnProveedorBuscar.Text = "Buscar";
-            this.BtnProveedorBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tipo Compra:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Notas:";
             // 
             // CboxCompraTipo
             // 
@@ -132,62 +105,52 @@
             this.CboxCompraTipo.Size = new System.Drawing.Size(371, 21);
             this.CboxCompraTipo.TabIndex = 4;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Notas:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tipo Compra:";
             // 
-            // TxtNotas
+            // BtnProveedorBuscar
             // 
-            this.TxtNotas.Location = new System.Drawing.Point(84, 86);
-            this.TxtNotas.Multiline = true;
-            this.TxtNotas.Name = "TxtNotas";
-            this.TxtNotas.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TxtNotas.Size = new System.Drawing.Size(371, 51);
-            this.TxtNotas.TabIndex = 6;
+            this.BtnProveedorBuscar.Location = new System.Drawing.Point(461, 19);
+            this.BtnProveedorBuscar.Name = "BtnProveedorBuscar";
+            this.BtnProveedorBuscar.Size = new System.Drawing.Size(80, 20);
+            this.BtnProveedorBuscar.TabIndex = 2;
+            this.BtnProveedorBuscar.Text = "Buscar";
+            this.BtnProveedorBuscar.UseVisualStyleBackColor = true;
+            this.BtnProveedorBuscar.Click += new System.EventHandler(this.BtnProveedorBuscar_Click);
             // 
-            // toolStrip1
+            // TxtProveedorNombre
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnProductoAgregar,
-            this.BtnProductoEditar,
-            this.BtnProductoEliminar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(579, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.TxtProveedorNombre.Location = new System.Drawing.Point(84, 19);
+            this.TxtProveedorNombre.Name = "TxtProveedorNombre";
+            this.TxtProveedorNombre.ReadOnly = true;
+            this.TxtProveedorNombre.Size = new System.Drawing.Size(371, 20);
+            this.TxtProveedorNombre.TabIndex = 1;
             // 
-            // BtnProductoAgregar
+            // label1
             // 
-            this.BtnProductoAgregar.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BtnProductoAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoAgregar.Image")));
-            this.BtnProductoAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductoAgregar.Name = "BtnProductoAgregar";
-            this.BtnProductoAgregar.Size = new System.Drawing.Size(121, 22);
-            this.BtnProductoAgregar.Text = "Agregar Producto";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Proveedor";
             // 
-            // BtnProductoEditar
+            // groupBox2
             // 
-            this.BtnProductoEditar.BackColor = System.Drawing.Color.Gold;
-            this.BtnProductoEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoEditar.Image")));
-            this.BtnProductoEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductoEditar.Name = "BtnProductoEditar";
-            this.BtnProductoEditar.Size = new System.Drawing.Size(130, 22);
-            this.BtnProductoEditar.Text = "Modificar Producto";
-            // 
-            // BtnProductoEliminar
-            // 
-            this.BtnProductoEliminar.BackColor = System.Drawing.Color.LightCoral;
-            this.BtnProductoEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoEliminar.Image")));
-            this.BtnProductoEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductoEliminar.Name = "BtnProductoEliminar";
-            this.BtnProductoEliminar.Size = new System.Drawing.Size(122, 22);
-            this.BtnProductoEliminar.Text = "Eliminar Producto";
+            this.groupBox2.Controls.Add(this.DgvLista);
+            this.groupBox2.Controls.Add(this.toolStrip1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 161);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(585, 254);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Detalle";
             // 
             // DgvLista
             // 
@@ -208,77 +171,6 @@
             this.DgvLista.Size = new System.Drawing.Size(569, 189);
             this.DgvLista.TabIndex = 1;
             this.DgvLista.VirtualMode = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textTotal);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.TxtTotalCantidad);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(15, 421);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(582, 89);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "TOTALES";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "CANTIDAD ITEMS";
-            // 
-            // TxtTotalCantidad
-            // 
-            this.TxtTotalCantidad.BackColor = System.Drawing.Color.DimGray;
-            this.TxtTotalCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalCantidad.ForeColor = System.Drawing.Color.White;
-            this.TxtTotalCantidad.Location = new System.Drawing.Point(81, 42);
-            this.TxtTotalCantidad.Name = "TxtTotalCantidad";
-            this.TxtTotalCantidad.ReadOnly = true;
-            this.TxtTotalCantidad.Size = new System.Drawing.Size(136, 29);
-            this.TxtTotalCantidad.TabIndex = 1;
-            this.TxtTotalCantidad.Text = "0";
-            this.TxtTotalCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textTotal
-            // 
-            this.textTotal.BackColor = System.Drawing.Color.Black;
-            this.textTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTotal.ForeColor = System.Drawing.Color.White;
-            this.textTotal.Location = new System.Drawing.Point(382, 42);
-            this.textTotal.Name = "textTotal";
-            this.textTotal.ReadOnly = true;
-            this.textTotal.Size = new System.Drawing.Size(156, 29);
-            this.textTotal.TabIndex = 3;
-            this.textTotal.Text = "0";
-            this.textTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(404, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "TOTAL";
-            // 
-            // BtnCrearCompra
-            // 
-            this.BtnCrearCompra.BackColor = System.Drawing.Color.Green;
-            this.BtnCrearCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCrearCompra.ForeColor = System.Drawing.Color.White;
-            this.BtnCrearCompra.Location = new System.Drawing.Point(234, 516);
-            this.BtnCrearCompra.Name = "BtnCrearCompra";
-            this.BtnCrearCompra.Size = new System.Drawing.Size(168, 32);
-            this.BtnCrearCompra.TabIndex = 3;
-            this.BtnCrearCompra.Text = "Crear Compra";
-            this.BtnCrearCompra.UseVisualStyleBackColor = false;
             // 
             // CProductoID
             // 
@@ -320,6 +212,118 @@
             this.CPrecioVentaUnitario.Name = "CPrecioVentaUnitario";
             this.CPrecioVentaUnitario.ReadOnly = true;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnProductoAgregar,
+            this.BtnProductoEditar,
+            this.BtnProductoEliminar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(579, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.TxtTotal);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.TxtTotalCantidad);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(15, 421);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(582, 89);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "TOTALES";
+            // 
+            // TxtTotal
+            // 
+            this.TxtTotal.BackColor = System.Drawing.Color.Black;
+            this.TxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotal.ForeColor = System.Drawing.Color.White;
+            this.TxtTotal.Location = new System.Drawing.Point(382, 42);
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.ReadOnly = true;
+            this.TxtTotal.Size = new System.Drawing.Size(156, 29);
+            this.TxtTotal.TabIndex = 3;
+            this.TxtTotal.Text = "0";
+            this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(404, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "TOTAL";
+            // 
+            // TxtTotalCantidad
+            // 
+            this.TxtTotalCantidad.BackColor = System.Drawing.Color.DimGray;
+            this.TxtTotalCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotalCantidad.ForeColor = System.Drawing.Color.White;
+            this.TxtTotalCantidad.Location = new System.Drawing.Point(81, 42);
+            this.TxtTotalCantidad.Name = "TxtTotalCantidad";
+            this.TxtTotalCantidad.ReadOnly = true;
+            this.TxtTotalCantidad.Size = new System.Drawing.Size(136, 29);
+            this.TxtTotalCantidad.TabIndex = 1;
+            this.TxtTotalCantidad.Text = "0";
+            this.TxtTotalCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(59, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "CANTIDAD ITEMS";
+            // 
+            // BtnCrearCompra
+            // 
+            this.BtnCrearCompra.BackColor = System.Drawing.Color.Green;
+            this.BtnCrearCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCrearCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnCrearCompra.Location = new System.Drawing.Point(234, 516);
+            this.BtnCrearCompra.Name = "BtnCrearCompra";
+            this.BtnCrearCompra.Size = new System.Drawing.Size(168, 32);
+            this.BtnCrearCompra.TabIndex = 3;
+            this.BtnCrearCompra.Text = "Crear Compra";
+            this.BtnCrearCompra.UseVisualStyleBackColor = false;
+            this.BtnCrearCompra.Click += new System.EventHandler(this.BtnCrearCompra_Click);
+            // 
+            // BtnProductoAgregar
+            // 
+            this.BtnProductoAgregar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BtnProductoAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoAgregar.Image")));
+            this.BtnProductoAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProductoAgregar.Name = "BtnProductoAgregar";
+            this.BtnProductoAgregar.Size = new System.Drawing.Size(121, 22);
+            this.BtnProductoAgregar.Text = "Agregar Producto";
+            this.BtnProductoAgregar.Click += new System.EventHandler(this.BtnProductoAgregar_Click);
+            // 
+            // BtnProductoEditar
+            // 
+            this.BtnProductoEditar.BackColor = System.Drawing.Color.Gold;
+            this.BtnProductoEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoEditar.Image")));
+            this.BtnProductoEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProductoEditar.Name = "BtnProductoEditar";
+            this.BtnProductoEditar.Size = new System.Drawing.Size(130, 22);
+            this.BtnProductoEditar.Text = "Modificar Producto";
+            // 
+            // BtnProductoEliminar
+            // 
+            this.BtnProductoEliminar.BackColor = System.Drawing.Color.LightCoral;
+            this.BtnProductoEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoEliminar.Image")));
+            this.BtnProductoEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnProductoEliminar.Name = "BtnProductoEliminar";
+            this.BtnProductoEliminar.Size = new System.Drawing.Size(122, 22);
+            this.BtnProductoEliminar.Text = "Eliminar Producto";
+            // 
             // FrmRegistroCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,9 +343,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -365,7 +369,7 @@
         private System.Windows.Forms.ToolStripButton BtnProductoEditar;
         private System.Windows.Forms.ToolStripButton BtnProductoEliminar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textTotal;
+        private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtTotalCantidad;
         private System.Windows.Forms.Label label4;

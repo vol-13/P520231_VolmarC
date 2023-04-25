@@ -15,6 +15,9 @@ namespace Logica.Models
         public DataTable Listar()
         {
             DataTable R = new DataTable();
+            Services.Conexion MiCnn = new Services.Conexion();
+
+            R = MiCnn.EjecutarSELECT("SPTipoProveedorListar");
 
             return R;
         }

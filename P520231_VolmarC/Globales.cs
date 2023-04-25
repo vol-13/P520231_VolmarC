@@ -10,9 +10,14 @@ namespace P520231_VolmarC
 
         public static Formularios.FrmUsuariosGestion MiFormGestionUsario = new Formularios.FrmUsuariosGestion();
 
+        public static Formularios.FrmProveedorGestion MiFormGestionProveedor = new Formularios.FrmProveedorGestion();
+
+
 
         //Debemos tener un obj de tipo usuario que permita almacenar los datos del usario que se haya logeado
         public static Logica.Models.Usuario MiUsuarioGlobal = new Logica.Models.Usuario();
+
+
 
         public static Formularios.FrmRegistroCompra MiFormRegistroCompra = new Formularios.FrmRegistroCompra();
 

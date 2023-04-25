@@ -233,7 +233,6 @@
             this.TxtUsuarioCorreo.Name = "TxtUsuarioCorreo";
             this.TxtUsuarioCorreo.Size = new System.Drawing.Size(233, 26);
             this.TxtUsuarioCorreo.TabIndex = 12;
-            this.TxtUsuarioCorreo.TextChanged += new System.EventHandler(this.TxtUsuarioCorreo_TextChanged);
             this.TxtUsuarioCorreo.Enter += new System.EventHandler(this.TxtUsuarioCorreo_Enter);
             this.TxtUsuarioCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsuarioCorreo_KeyPress);
             this.TxtUsuarioCorreo.Leave += new System.EventHandler(this.TxtUsuarioCorreo_Leave);
